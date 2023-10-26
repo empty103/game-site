@@ -1,0 +1,22 @@
+.back {
+    padding: 16px;
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.back__btn {
+    padding: 10px 20px;
+    font-size: 28px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: background-color 0.3s, color .5s;
+    background-color: #f8c100;
+    color: #333;
+}
+
+.back__btn:hover {
+    background-color: #333;
+    color: #f8c100;
+}

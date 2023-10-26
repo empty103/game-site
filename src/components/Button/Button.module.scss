@@ -1,0 +1,46 @@
+
+.btn {
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 16px;
+    border: none;
+    color: var(--white);
+}
+
+.small {
+    width: 146px;
+    height: 44px;
+}
+
+.middle {
+    width: 150px;
+    height: 50px;
+}
+
+.large {
+    width: 200px;
+    height: 60px;
+}
+
+.orange {
+    background-color: var(--bg-color-orange);
+    transition: .3s;
+
+    &:hover {
+        background-color: var(--orange-hover);
+    }
+}
+
+.golden {
+    background-color: var();
+}
+
+.grey {
+    background-color: var(--bg-color-grey);
+    transition: .3s;
+
+    &:hover {
+        background-color: var(--grey-hover);
+    }
+}

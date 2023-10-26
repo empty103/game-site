@@ -1,0 +1,56 @@
+.page {
+    max-width: 450px;
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    user-select: none;
+    outline: none;
+}
+
+.fifteen {
+    padding-bottom: 100%;
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+.tile {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.5s;
+    border: none;
+    width: 25%;
+    height: 25%;
+    outline: none;
+    color: #4a4a4a;
+    background-color: #b5e859;
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 84%;
+        height: 84%;
+        margin: 8%;
+        box-shadow: inset 0 0 3px 4px #0b0472;
+    }
+}
+
+.fifteen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.game__shuffle {
+    pointer-events: none;
+    opacity: 0.8;
+}
