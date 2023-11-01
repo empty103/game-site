@@ -1,8 +1,10 @@
 import { format } from 'date-fns';
-import styles from './ArticlesPage.module.scss';
 
-import FlexibilityImg from './img/mejorar-memoria.jpg';
-import { CustomLink } from '../components';
+import styles from './ArticlesPage.module.scss';
+import FlexibilityImg from '../img/mejorar-memoria.jpg';
+
+import { CustomLink } from '../../components';
+import Aside from '../../components/aside/Aside';
 
 const ArticlesPage = () => {
     return (
@@ -12,25 +14,29 @@ const ArticlesPage = () => {
                 <input type="text" className={styles.search} />
             </header>
 
-            <main className={styles.main__content}>
+            <main className={styles.main}>
                 <article className={styles.article__main}>
                     <CustomLink to='/articles/flexibility'>
+                        <span className={styles.article__text}>Flexibility</span>
                         <img src={FlexibilityImg} alt="FlexibilityImg" />
                     </CustomLink>
                 </article>
 
                 <article className={styles.article__addition1}>
-                    <img src={FlexibilityImg} alt="FlexibilityImg" />
-
+                    <CustomLink to='/articles/flexibility'>
+                        <span className={styles.article__text}>Flexibility</span>
+                        <img src={FlexibilityImg} alt="FlexibilityImg" />
+                    </CustomLink>
                 </article>
 
                 <article className={styles.article__addition2}>
-                    <img src={FlexibilityImg} alt="FlexibilityImg" />
+                    <CustomLink to='/articles/flexibility'>
+                        <span className={styles.article__text}>Flexibility</span>
+                        <img src={FlexibilityImg} alt="FlexibilityImg" />
+                    </CustomLink>
                 </article>
 
-                <aside className={styles.aside}>
-                    <div className={styles.info}>информация</div>
-                </aside>
+                <Aside className={styles.aside}></Aside>
             </main>
 
             <footer className={styles.footer}>

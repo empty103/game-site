@@ -1,8 +1,8 @@
-import { BackButton, CustomLink } from "../components";
+import { BackButton, CustomLink } from "../../components";
 
 import styles from './GamesPage.module.scss';
-import TicTacImg from './img/tictac.jpg';
-import FifteenImg from './img/fifteen.jpg';
+import TicTacImg from '../img/tictac.jpg';
+import FifteenImg from '../img/fifteen.jpg';
 
 const GamesPage = () => {
     return (

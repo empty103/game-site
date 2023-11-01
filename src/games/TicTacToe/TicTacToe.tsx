@@ -92,7 +92,10 @@ const TicTacToe = () => {
     } else if (isBoardFull(board)) {
         status = 'Tie!';
     } else {
-        status = `Current player: ${xIsNext ? 'X' : 'O'}`;
+        status = `Current player: ${xIsNext
+            ? 'X'
+            : 'O'
+            }`;
     }
 
     return (

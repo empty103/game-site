@@ -1,5 +1,5 @@
 import styles from './Main.module.scss';
-import { Button, CustomLink } from '../../components';
+import { CustomLink } from '../../components';
 
 const Main = () => {
     return (
