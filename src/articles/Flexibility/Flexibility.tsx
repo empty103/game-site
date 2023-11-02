@@ -1,10 +1,23 @@
-import { CustomLink } from '../../components';
+import { Helmet } from 'react-helmet-async';
+
 import Aside from '../../components/aside/Aside';
 import styles from './Flexibility.module.scss';
 
 const Flexibility = () => {
     return (
         <>
+            <Helmet>
+                <title>Cognitive Flexibility - Enhancing Mental Agility</title>
+                <meta name="keywords" content="cognitive flexibility, mental flexibility, cognitive abilities, adaptability, problem-solving, brain training" />
+                <meta property="og:url" content="https://www.brainTraining.com/flexibility" />
+                <meta name="description" content="Explore the concept of cognitive flexibility,
+                 the brain's ability to adapt behavior and thinking to new, changing, or unexpected situations.
+                 Learn how cognitive flexibility plays a significant role in learning and problem-solving." />
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:title" content="Cognitive Flexibility" />
+            </Helmet>
+
+
             <header className={styles.header}>
                 <h1>Brain Training</h1>
                 <input type="text" className={styles.search} />

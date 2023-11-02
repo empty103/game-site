@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import {
   Navigate,
   Outlet,
@@ -20,38 +21,41 @@ const NotFound = lazy(() => import('../../pages/NotFoundPage'));
 const GamesPage = lazy(() => import('../../pages/games/GamesPage'));
 
 function App() {
+
   return (
-    <div className={styles.app}>
+    <HelmetProvider>
+      <div className={styles.app}>
 
-      <Outlet />
+        <Outlet />
 
-      <Routes>
-        <Route path='/' element={
-          <Suspense fallback={<Loading />}>
-            <CommonLayout />
-          </Suspense>
-        } />
+        <Routes>
+          <Route path='/' element={
+            <Suspense fallback={<Loading />}>
+              <CommonLayout />
+            </Suspense>
+          } />
 
-        <Route path='/games' element={
-          <Suspense fallback={<Loading />}>
-            <GamesPage />
-          </Suspense>
-        } />
-        <Route path='/play' element={<Navigate to='/games' replace />} />
+          <Route path='/games' element={
+            <Suspense fallback={<Loading />}>
+              <GamesPage />
+            </Suspense>
+          } />
+          <Route path='/play' element={<Navigate to='/games' replace />} />
 
-        <Route path='/games/tic-tac-toe' element={<TicTacToe />} />
-        <Route path='/games/fifteen' element={<Fifteen />} />
+          <Route path='/games/tic-tac-toe' element={<TicTacToe />} />
+          <Route path='/games/fifteen' element={<Fifteen />} />
 
-        <Route path='/articles' element={<ArticlesPage />} />
-        <Route path='/articles/flexibility' element={<Flexibility />} />
+          <Route path='/articles' element={<ArticlesPage />} />
+          <Route path='/articles/flexibility' element={<Flexibility />} />
 
-        <Route path='*' element={
-          <Suspense fallback={<Loading />}>
-            <NotFound />
-          </Suspense>
-        } />
-      </Routes>
-    </div>
+          <Route path='*' element={
+            <Suspense fallback={<Loading />}>
+              <NotFound />
+            </Suspense>
+          } />
+        </Routes>
+      </div>
+    </HelmetProvider>
   );
 }
 

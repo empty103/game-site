@@ -1,4 +1,5 @@
 import { BackButton, CustomLink } from "../../components";
+import { Helmet } from "react-helmet-async";
 
 import styles from './GamesPage.module.scss';
 import TicTacImg from '../img/tictac.jpg';
@@ -7,6 +8,18 @@ import FifteenImg from '../img/fifteen.jpg';
 const GamesPage = () => {
     return (
         <>
+            <Helmet>
+                <title>Intellectual Games - Play and Develop Your Mind</title>
+                <meta name="keywords" content="intellect, games, abilities, play, free" />
+                <meta property="og:url" content="https://www.brainTraining.com/games" />
+                <meta name="description" content="Explore a collection of intellectual games designed to 
+                enhance logical thinking and provide an enjoyable pastime. Test your intellect and skills 
+                with our selection of free games."/>
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:title" content="Brain Training" />
+            </Helmet>
+
+
             <main className={styles.main}>
                 <div className={styles.container}>
 

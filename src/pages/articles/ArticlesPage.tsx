@@ -5,10 +5,22 @@ import FlexibilityImg from '../img/mejorar-memoria.jpg';
 
 import { CustomLink } from '../../components';
 import Aside from '../../components/aside/Aside';
+import { Helmet } from 'react-helmet-async';
 
 const ArticlesPage = () => {
     return (
         <>
+            <Helmet>
+                <title>Brain Training Articles</title>
+                <meta name="keywords" content="intellect, games, abilities, play, free" />
+                <meta property="og:url" content="https://www.brainTraining.com/articles" />
+                <meta name="description" content="Explore a collection of intellectual games designed to 
+                enhance logical thinking and provide an enjoyable pastime. Test your intellect and skills 
+                with our selection of free games."/>
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:title" content="Brain Training" />
+            </Helmet>
+
             <header className={styles.header}>
                 <h1>Brain Training</h1>
                 <input type="text" className={styles.search} />
